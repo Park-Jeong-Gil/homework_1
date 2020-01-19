@@ -1,0 +1,328 @@
+/*==== sparkle effect ====*/
+
+.sparkle_effect  > span{
+    animation: spakle;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+.sparkle_effect  .effect1{animation-duration: .25s;}
+.sparkle_effect  .effect2{animation-duration: .35s;}
+.sparkle_effect  .effect3{animation-duration: .4s;}
+
+@keyframes spakle
+{
+    0%
+    {
+        padding: 0;
+    }
+    100%{
+        padding: 85px;
+    }
+}
+
+
+/*==== bounce effect ====*/
+
+.money_image{
+    animation: bounce 0.65s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.6, 0.1, 0.3, 1);
+}
+
+@keyframes bounce
+{
+    0%{
+        transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(-5px);
+    }
+    85% {
+        transform: translateY(-1px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/*==== pulse effect ====*/
+
+.shillion {
+    animation: pulse .65s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.6, 0.1, 0.3, 1);
+}
+
+@keyframes pulse
+{
+    0%{
+        transform: none;
+    }
+    20% {
+        transform: scale(1.08);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*==== left hand effect ====*/
+
+.left_hand {
+    animation: left_hand .65s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.6, 0.1, 0.3, 1);
+    transform-origin: left bottom;
+}
+
+@keyframes left_hand
+{
+    0%{
+        transform: none;
+    }
+    20% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+
+/*==== righ hand effect ====*/
+
+.right_hand {
+    animation: right_hand .65s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.6, 0.1, 0.3, 1);
+    transform-origin: right bottom;
+}
+
+@keyframes right_hand
+{
+    0%{
+        transform: none;
+    }
+    20% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+
+/*==== Blink effect ====*/
+
+.drop_the{
+    animation: Blink1 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.6, 0.1, 0.3, 1);
+}
+
+.money_neon_off{
+    animation: Blink1 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.6, 0.1, 0.3, 1);
+}
+
+@keyframes Blink1
+{
+    0%{
+        opacity:0.88 ;
+    }
+    50% {
+        opacity:1 ;
+    }
+    100% {
+        opacity:0.88 ;
+    }
+}
+
+.money_neon_on{
+    animation: Blink2 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out
+}
+
+@keyframes Blink2
+{
+    0%{
+        opacity:1 ;
+    }
+    3% {
+        opacity:0 ;
+    }
+    6% {
+        opacity:1 ;
+    }
+    9% {
+        opacity:0 ;
+    }
+    12% {
+        opacity:0 ;
+    }
+    15% {
+        opacity:0 ;
+    }
+    100% {
+        opacity:0 ;
+    }
+}
+
+.sns_blink{
+    animation: Blink3 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out
+}
+
+@keyframes Blink3
+{
+    0%{
+        opacity:0.6 ;
+    }
+    3% {
+        opacity:1 ;
+    }
+    6% {
+        opacity:0.6 ;
+    }
+    9% {
+        opacity:1 ;
+    }
+    12% {
+        opacity:1 ;
+    }
+    15% {
+        opacity:1 ;
+    }
+    100% {
+        opacity:1 ;
+    }
+}
+
+/*==== hide effect ====*/
+
+.sudden_coins {
+    animation: hide 2s;
+}
+
+@keyframes hide
+{
+    0%{
+        display: block;
+    }
+    100% {
+        display: none;
+    }
+}
+
+
+
+/*==== active page effect ====*/
+
+section.active_top{
+    animation: top .8s;
+    animation-timing-function: ease-in-out
+}
+
+@keyframes top
+{
+    0%, 30%, 55%, 70%, 80%, 90%, 100% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-100px);
+    }
+    45% {
+        transform: translateY(-50px);
+    }
+    63% {
+        transform: translateY(-15px);
+    }
+    75% {
+        transform: translateY(-7px);
+    }
+    85% {
+        transform: translateY(-4px);
+    }
+    95% {
+        transform: translateY(-2px);
+    }
+}
+
+.close_page .active_top{
+    animation: close_top .1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes close_top
+{
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-500px);
+    }
+
+}
+
+section.active_bottom{
+    animation: bottom .8s;
+    animation-timing-function: ease-in-out
+}
+
+@keyframes bottom
+{
+    0%, 30%, 55%, 70%, 80%, 90%, 100% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(100px);
+    }
+    45% {
+        transform: translateY(55px);
+    }
+    63% {
+        transform: translateY(15px);
+    }
+    85% {
+        transform: translateY(4px);
+    }
+    95% {
+        transform: translateY(2px);
+    }
+}
+
+.close_page .active_bottom{
+    animation: close_bottom .1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes close_bottom
+{
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(500px);
+    }
+
+}
+
